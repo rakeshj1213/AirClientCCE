@@ -107,7 +107,7 @@ public class CommercialDetails implements java.io.Serializable
       this.commercialFareComponent = commercialFareComponent;
    }
 
-   public cnk.air_commercialscalculationengine.FareBreakUp getFareBreakUp()
+   public cnk.air_clientcommercialscalculationengine.FareBreakUp getFareBreakUp()
    {
       return this.fareBreakUp;
    }
