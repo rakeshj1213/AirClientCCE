@@ -30,6 +30,8 @@ public class CommonElements implements java.io.Serializable
 
    private java.lang.String rateCode;
 
+   private java.util.List<cnk.air_clientcommercialscalculationengine.SlabDetails> slabDetails;
+
    public CommonElements()
    {
    }
@@ -144,12 +146,30 @@ public class CommonElements implements java.io.Serializable
       this.rateCode = rateCode;
    }
 
-   public CommonElements(java.lang.String supplier,
-         java.lang.String supplierMarket, java.lang.String IATANumber,
-         java.lang.String segment, java.util.Date contractValidity,
-         java.lang.String productName, java.lang.String clientType,
-         java.lang.String clientGroup, java.lang.String clientName,
-         java.lang.String rateType, java.lang.String rateCode)
+   public java.util.List<cnk.air_clientcommercialscalculationengine.SlabDetails> getSlabDetails()
+   {
+      return this.slabDetails;
+   }
+
+   public void setSlabDetails(
+         java.util.List<cnk.air_clientcommercialscalculationengine.SlabDetails> slabDetails)
+   {
+      this.slabDetails = slabDetails;
+   }
+
+   public CommonElements(
+         java.lang.String supplier,
+         java.lang.String supplierMarket,
+         java.lang.String IATANumber,
+         java.lang.String segment,
+         java.util.Date contractValidity,
+         java.lang.String productName,
+         java.lang.String clientType,
+         java.lang.String clientGroup,
+         java.lang.String clientName,
+         java.lang.String rateType,
+         java.lang.String rateCode,
+         java.util.List<cnk.air_clientcommercialscalculationengine.SlabDetails> slabDetails)
    {
       this.supplier = supplier;
       this.supplierMarket = supplierMarket;
@@ -162,6 +182,7 @@ public class CommonElements implements java.io.Serializable
       this.clientName = clientName;
       this.rateType = rateType;
       this.rateCode = rateCode;
+      this.slabDetails = slabDetails;
    }
 
 }
