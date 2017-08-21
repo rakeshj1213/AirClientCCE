@@ -14,8 +14,8 @@ public class FlightDetails implements java.io.Serializable
 
    private java.util.Date flightTiming;
 
-  public boolean CheckRange(String configuredInput, int checkingValue)
-  {
+   public boolean CheckRange(String configuredInput, int checkingValue)
+   {
 
       String[] configuredInputList = configuredInput.split(";");
       if (configuredInputList[0].equals("LESSTHANEQUALTO"))
@@ -46,46 +46,46 @@ public class FlightDetails implements java.io.Serializable
 
       return false;
 
-  }
+   }
 
-  public boolean LESSTHANEQUALTO(int configuredInput, int checkingValue)
-  {
+   public boolean LESSTHANEQUALTO(int configuredInput, int checkingValue)
+   {
 
       if (checkingValue <= configuredInput)
          return true;
 
       return false;
-  }
+   }
 
-  public boolean GREATERTHANEQUALTO(int configuredInput, int checkingValue)
-  {
+   public boolean GREATERTHANEQUALTO(int configuredInput, int checkingValue)
+   {
 
       if (checkingValue >= configuredInput)
          return true;
 
       return false;
-  }
+   }
 
-  public boolean BETWEEN(int lowerLimit, int upperLimit, int checkingValue)
-  {
+   public boolean BETWEEN(int lowerLimit, int upperLimit, int checkingValue)
+   {
 
       if (GREATERTHANEQUALTO(lowerLimit, checkingValue) && LESSTHANEQUALTO(upperLimit, checkingValue))
          return true;
 
       return false;
-  }
+   }
 
-  public boolean EQUAL(int configuredInput, int checkingValue)
-  {
+   public boolean EQUAL(int configuredInput, int checkingValue)
+   {
 
       if (checkingValue == configuredInput)
          return true;
 
       return false;
-  }
+   }
 
-  public boolean IN(String configuredInput, int checkingValue)
-  {
+   public boolean IN(String configuredInput, int checkingValue)
+   {
 
       String[] configuredInputList = configuredInput.split("/");
       for (String tempConfiguredInput : configuredInputList)
@@ -96,11 +96,10 @@ public class FlightDetails implements java.io.Serializable
       }
 
       return false;
-  }
+   }
 
-
-  public static boolean checkFlightTime(String configuredInput, Date conditionValue)
-  {
+   public static boolean checkFlightTime(String configuredInput, Date conditionValue)
+   {
 
       try
       {
@@ -150,12 +149,11 @@ public class FlightDetails implements java.io.Serializable
       }
 
       return false;
-  }
+   }
 
    static final long serialVersionUID = 1L;
 
    private int flightNumber;
-   private java.util.List<cnk.air_clientcommercialscalculationengine.PassengerDetails> passengerDetails;
 
    public FlightDetails()
    {
@@ -169,17 +167,6 @@ public class FlightDetails implements java.io.Serializable
    public void setFlightNumber(int flightNumber)
    {
       this.flightNumber = flightNumber;
-   }
-
-   public java.util.List<cnk.air_clientcommercialscalculationengine.PassengerDetails> getPassengerDetails()
-   {
-      return this.passengerDetails;
-   }
-
-   public void setPassengerDetails(
-         java.util.List<cnk.air_clientcommercialscalculationengine.PassengerDetails> passengerDetails)
-   {
-      this.passengerDetails = passengerDetails;
    }
 
    public java.util.Date getFlightTiming()
@@ -200,6 +187,12 @@ public class FlightDetails implements java.io.Serializable
       this.flightTiming = flightTiming;
       this.flightNumber = flightNumber;
       this.passengerDetails = passengerDetails;
+   }
+
+   public FlightDetails(java.util.Date flightTiming, int flightNumber)
+   {
+      this.flightTiming = flightTiming;
+      this.flightNumber = flightNumber;
    }
 
 }
