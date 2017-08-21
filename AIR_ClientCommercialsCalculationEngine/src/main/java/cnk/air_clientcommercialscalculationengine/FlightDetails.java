@@ -12,7 +12,7 @@ import java.util.Date;
 public class FlightDetails implements java.io.Serializable
 {
 
-   private java.util.Date flightTiming;
+   private boolean isAdvanced;
 
    public boolean CheckRange(String configuredInput, int checkingValue)
    {
@@ -169,16 +169,6 @@ public class FlightDetails implements java.io.Serializable
       this.flightNumber = flightNumber;
    }
 
-   public java.util.Date getFlightTiming()
-   {
-      return this.flightTiming;
-   }
-
-   public void setFlightTiming(java.util.Date flightTiming)
-   {
-      this.flightTiming = flightTiming;
-   }
-
    public FlightDetails(
          java.util.Date flightTiming,
          int flightNumber,
@@ -189,9 +179,19 @@ public class FlightDetails implements java.io.Serializable
       this.passengerDetails = passengerDetails;
    }
 
-   public FlightDetails(java.util.Date flightTiming, int flightNumber)
+   public boolean isIsAdvanced()
    {
-      this.flightTiming = flightTiming;
+      return this.isAdvanced;
+   }
+
+   public void setIsAdvanced(boolean isAdvanced)
+   {
+      this.isAdvanced = isAdvanced;
+   }
+
+   public FlightDetails(boolean isAdvanced, int flightNumber)
+   {
+      this.isAdvanced = isAdvanced;
       this.flightNumber = flightNumber;
    }
 
