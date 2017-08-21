@@ -20,6 +20,8 @@ public class RetentionCommercialDetails implements java.io.Serializable
    private double remainingPercentageAmount;
    private double remainingAmount;
 
+   private java.lang.String entityName;
+
    public RetentionCommercialDetails()
    {
    }
@@ -127,14 +129,24 @@ public class RetentionCommercialDetails implements java.io.Serializable
       this.remainingAmount = remainingAmount;
    }
 
+   public java.lang.String getEntityName()
+   {
+      return this.entityName;
+   }
+
+   public void setEntityName(java.lang.String entityName)
+   {
+      this.entityName = entityName;
+   }
+
    public RetentionCommercialDetails(java.lang.String commercialName,
          double commercialCalculationPercentage,
          double commercialCalculationAmount,
          java.lang.String commercialCurrency,
-         java.lang.String commercialFareComponent,
-         double retentionPercentage, double retentionAmountPercentage,
-         double commercialAmount, double remainingPercentageAmount,
-         double remainingAmount)
+         java.lang.String commercialFareComponent, double retentionPercentage,
+         double retentionAmountPercentage, double commercialAmount,
+         double remainingPercentageAmount, double remainingAmount,
+         java.lang.String entityName)
    {
       this.commercialName = commercialName;
       this.commercialCalculationPercentage = commercialCalculationPercentage;
@@ -146,6 +158,7 @@ public class RetentionCommercialDetails implements java.io.Serializable
       this.commercialAmount = commercialAmount;
       this.remainingPercentageAmount = remainingPercentageAmount;
       this.remainingAmount = remainingAmount;
+      this.entityName = entityName;
    }
 
 }
