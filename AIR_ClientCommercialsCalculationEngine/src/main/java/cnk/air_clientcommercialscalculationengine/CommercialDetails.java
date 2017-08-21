@@ -113,7 +113,7 @@ public class CommercialDetails implements java.io.Serializable
    }
 
    public void setFareBreakUp(
-         cnk.air_commercialscalculationengine.FareBreakUp fareBreakUp)
+         cnk.air_clientcommercialscalculationengine.FareBreakUp fareBreakUp)
    {
       this.fareBreakUp = fareBreakUp;
    }
@@ -123,7 +123,7 @@ public class CommercialDetails implements java.io.Serializable
          double commercialCalculationAmount, double commercialAmount,
          double commercialTotalAmount, java.lang.String commercialCurrency,
          java.lang.String commercialFareComponent,
-         cnk.air_commercialscalculationengine.FareBreakUp fareBreakUp)
+         cnk.air_clientcommercialscalculationengine.FareBreakUp fareBreakUp)
    {
       this.commercialName = commercialName;
       this.commercialInitialAmount = commercialInitialAmount;
