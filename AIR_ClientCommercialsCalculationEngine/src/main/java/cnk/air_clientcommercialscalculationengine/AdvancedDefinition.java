@@ -9,7 +9,7 @@ public class AdvancedDefinition implements java.io.Serializable
 {
 
 
-	public boolean checkFareBasisValue(String fareBasis, String checkfareBasisValue, String fareBasisValue) {
+	/*public boolean checkFareBasisValue(String fareBasis, String checkfareBasisValue, String fareBasisValue) {
 		
 		if(fareBasisValue!=null) {
 			
@@ -27,7 +27,7 @@ public class AdvancedDefinition implements java.io.Serializable
 		}
 
 		return false;
-	}
+	}*/
    static final long serialVersionUID = 1L;
 
    private boolean isAdvanceDefinition;
