@@ -18,6 +18,10 @@ public class EntityDetails implements java.io.Serializable
    private java.lang.String childEntityName;
    private java.util.List<cnk.air_clientcommercialscalculationengine.CommercialHead> commercialHeadDetails;
 
+   private java.util.List<java.lang.String> commercialsApplied;
+
+   private java.util.List<cnk.air_clientcommercialscalculationengine.RetentionCommercialDetails> retentionCommercialDetails;
+
    public EntityDetails()
    {
    }
@@ -103,6 +107,28 @@ public class EntityDetails implements java.io.Serializable
       this.commercialHeadDetails = commercialHeadDetails;
    }
 
+   public java.util.List<java.lang.String> getCommercialsApplied()
+   {
+      return this.commercialsApplied;
+   }
+
+   public void setCommercialsApplied(
+         java.util.List<java.lang.String> commercialsApplied)
+   {
+      this.commercialsApplied = commercialsApplied;
+   }
+
+   public java.util.List<cnk.air_clientcommercialscalculationengine.RetentionCommercialDetails> getRetentionCommercialDetails()
+   {
+      return this.retentionCommercialDetails;
+   }
+
+   public void setRetentionCommercialDetails(
+         java.util.List<cnk.air_clientcommercialscalculationengine.RetentionCommercialDetails> retentionCommercialDetails)
+   {
+      this.retentionCommercialDetails = retentionCommercialDetails;
+   }
+
    public EntityDetails(
          java.lang.String entityType,
          java.lang.String entityName,
@@ -111,7 +137,9 @@ public class EntityDetails implements java.io.Serializable
          java.lang.String entityStatus,
          java.lang.String selectedRow,
          java.lang.String childEntityName,
-         java.util.List<cnk.air_clientcommercialscalculationengine.CommercialHead> commercialHeadDetails)
+         java.util.List<cnk.air_clientcommercialscalculationengine.CommercialHead> commercialHeadDetails,
+         java.util.List<java.lang.String> commercialsApplied,
+         java.util.List<cnk.air_clientcommercialscalculationengine.RetentionCommercialDetails> retentionCommercialDetails)
    {
       this.entityType = entityType;
       this.entityName = entityName;
@@ -121,6 +149,8 @@ public class EntityDetails implements java.io.Serializable
       this.selectedRow = selectedRow;
       this.childEntityName = childEntityName;
       this.commercialHeadDetails = commercialHeadDetails;
+      this.commercialsApplied = commercialsApplied;
+      this.retentionCommercialDetails = retentionCommercialDetails;
    }
 
 }
