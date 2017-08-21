@@ -13,33 +13,35 @@ public class CommercialHead implements java.io.Serializable
 
    private java.lang.String nettOffCommercialHeadName;
 
-   @org.kie.api.definition.type.Label(value = "Receivable or Payable")
+   @org.kie.api.definition.type.Label("Receivable or Payable")
    private java.lang.String commercialType;
 
    private boolean settlementTransactionWise;
 
-   @org.kie.api.definition.type.Label(value = "Final or Provisional")
+   @org.kie.api.definition.type.Label("Final or Provisional")
    private java.lang.String contractType;
 
-   @org.kie.api.definition.type.Label(value = "Used for Standard Commercials")
+   @org.kie.api.definition.type.Label("Used for Standard Commercials")
    private boolean commissionable;
 
-   @org.kie.api.definition.type.Label(value = "Used for Standard Commercials")
+   @org.kie.api.definition.type.Label("Used for Standard Commercials")
    private boolean markDownApplicable;
 
-   @org.kie.api.definition.type.Label(value = "Used for Standard Commercials")
+   @org.kie.api.definition.type.Label("Used for Standard Commercials")
    private java.lang.String markDownClientType;
 
-   @org.kie.api.definition.type.Label(value = "Used for Standard Commercials")
+   @org.kie.api.definition.type.Label("Used for Standard Commercials")
    private double minimumMarkUpPercentage;
 
-   @org.kie.api.definition.type.Label(value = "Used for Standard Commercials")
+   @org.kie.api.definition.type.Label("Used for Standard Commercials")
    private double maximumMarkUpPercentage;
 
-   @org.kie.api.definition.type.Label(value = "Used for Standard Commercials")
+   @org.kie.api.definition.type.Label("Used for Standard Commercials")
    private java.lang.String markUpClientType;
 
    private java.lang.String status;
+
+   private java.lang.String commercialProperty;
 
    public CommercialHead()
    {
@@ -166,13 +168,24 @@ public class CommercialHead implements java.io.Serializable
       this.status = status;
    }
 
+   public java.lang.String getCommercialProperty()
+   {
+      return this.commercialProperty;
+   }
+
+   public void setCommercialProperty(java.lang.String commercialProperty)
+   {
+      this.commercialProperty = commercialProperty;
+   }
+
    public CommercialHead(java.lang.String commercialHeadName,
          java.lang.String nettOffCommercialHeadName,
          java.lang.String commercialType, boolean settlementTransactionWise,
          java.lang.String contractType, boolean commissionable,
          boolean markDownApplicable, java.lang.String markDownClientType,
          double minimumMarkUpPercentage, double maximumMarkUpPercentage,
-         java.lang.String markUpClientType, java.lang.String status)
+         java.lang.String markUpClientType, java.lang.String status,
+         java.lang.String commercialProperty)
    {
       this.commercialHeadName = commercialHeadName;
       this.nettOffCommercialHeadName = nettOffCommercialHeadName;
@@ -186,6 +199,7 @@ public class CommercialHead implements java.io.Serializable
       this.maximumMarkUpPercentage = maximumMarkUpPercentage;
       this.markUpClientType = markUpClientType;
       this.status = status;
+      this.commercialProperty = commercialProperty;
    }
 
 }
