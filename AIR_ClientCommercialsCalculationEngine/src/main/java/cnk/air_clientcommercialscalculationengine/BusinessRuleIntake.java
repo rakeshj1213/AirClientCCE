@@ -33,7 +33,7 @@ public class BusinessRuleIntake implements java.io.Serializable
             ContractType, Commissionable,
             MarkDownApplicable, MarkDownClientType,
             MinimumMarkUpPercentage, MaximumMarkUpPercentage,
-            MarkUpClientType, null);
+            MarkUpClientType, null,null);
       this.setCommercialHead(new ArrayList<CommercialHead>());
       this.getCommercialHead().add(commercialHead);
 
@@ -49,7 +49,7 @@ public class BusinessRuleIntake implements java.io.Serializable
             ContractType, false,
             false, null,
             0, 0,
-            null, null);
+            null, null,null);
       this.getCommercialHead().add(commercialHead);
 
    }
